@@ -118,11 +118,11 @@ window.view = {
 		document.getElementById('col').value = ''
 	},
 	generateFirstMatrixElements: function() {
-		var size = this.rowsA * this.colsA
-		for ( i = 0 ; i < size ; i++)
-		{
-			var random = Math.floor(Math.random()*15)
-			this.matrixA.push(random)
+		var size = this.rowsA * this.colsA                                  
+		for ( i = 1 ; i <= size ; i++)
+		{  
+			var value = i;
+			this.matrixA.push(value)
 		}
 		this.resetRowsAndCols()
 		this.disableButton('row')
@@ -135,10 +135,10 @@ window.view = {
 	},
 	generateSecondMatrixElements: function() {
 		var size = this.rowsB * this.colsB
-		for ( i = 0 ; i < size ; i++)
+		for ( i = 1 ; i <= size ; i++)
 		{
-			var random = Math.floor(Math.random()*15)
-			this.matrixB.push(random)
+			var value = i;
+			this.matrixB.push(value)
 		}
 		this.disableButton('generateB')
 		this.changeClass( 'generateB', 'buttonDisable GenerateValueButton show' )
@@ -151,7 +151,7 @@ window.view = {
 		matA.className = 'table'
 		 // var caption = matA.createCaption();
 		 // caption.innerHTML = ""
-		for ( i = 0 ; i < this.rowsA ; i++ )
+		for ( i = 1 ; i <=this.rowsA ; i++ )
 		{	
 			var row = document.createElement('tr')
 			for ( j = 0 ; j < this.colsA ; j++ )
@@ -174,7 +174,7 @@ window.view = {
 		matB.className = 'table'
 		// var caption = matB.createCaption();
 		// caption.innerHTML = "<b>Matrix B</b>"
-		for ( i = 0 ; i < this.rowsB ; i++ )
+		for ( i = 1 ; i <=this.rowsB ; i++ )
 		{	
 			var row = document.createElement('tr')
 			for ( j = 0 ; j < this.colsB ; j++ )
