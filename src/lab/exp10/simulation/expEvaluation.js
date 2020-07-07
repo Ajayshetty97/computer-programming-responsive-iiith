@@ -541,13 +541,17 @@ window.view = {
 		this.disableElement('c')
 		this.disableElement('d')
 		document.getElementById('buttonSave').className += ' hide'
-		document.getElementById('buttonEdit').className = 'button editButton'
+		document.getElementById('buttonEdit').className ='button editButton'
 	},
 	deFreezeInputs: function () {
 		this.enableElement('a')
 		this.enableElement('b')
 		this.enableElement('c')
 		this.enableElement('d')
+                                 document.getElementById('a').value= 0
+                                document.getElementById('b').value= 0
+                                document.getElementById('c').value= 0
+                                document.getElementById('d').value= 0
 		document.getElementById('buttonEdit').className += ' hide'
 		document.getElementById('buttonSave').className = 'button saveButton'
 	},
